@@ -1,0 +1,121 @@
+$mainColor : #50545ddf;
+$segmaColor:#FF1E00;
+$lightColor : #EAEAEA;
+$buttomColor:#00ABB3;
+// variabels
+@mixin prefix($name,$value,$prefxes){
+    @each $prefix in $prefxes{
+       #{ "-" + $prefix + '-' + $name}:$value;
+    }
+    $name:$value;
+}
+@mixin anmietion($name){
+    @-webkit-keyframes #{$name}{
+        @content;
+    }
+    @-moz-keyframes #{$name}{
+        @content;
+    }    
+    @keyframes #{$name}{
+        @content;
+    }
+}
+@mixin respond ($breakpoint) {
+    @if $breakpoint==phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }@else if $breakpoint==tablet {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  }@else if $breakpoint== medium {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }@else if $breakpoint==large {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}
+// mixins 
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    @include prefix(box-sizing,border-box,webkit moz o )
+}
+.header{
+    background-color: $lightColor;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 20px 10px 20px;
+        height: 10vh;
+        .logo{
+            color: $segmaColor;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .list{
+            display: flex;
+            float: right;
+            justify-content: space-around;
+            width: 50%;
+            .link{
+                color: $mainColor;
+                cursor: pointer;
+                font-size: 20px;
+                &:hover{
+                    color: rgba(0, 0, 0, 0.832);
+                }
+            }
+        }
+    }
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?w=2000") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    .main-continer{
+        margin: 0  0 0 10% ;
+        p{
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: $lightColor;
+        }
+        h1{
+            color: $segmaColor;
+            font-size: 55px;
+            margin-bottom: 30px;
+        }
+        button{
+            font-size: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: $buttomColor;
+            color: white;
+            width: 150px;
+            height: 40px;
+            transition: all 400ms ease;
+            cursor: pointer;
+            &:hover{
+                background-color: #008188;
+                transform: scale(1.07);
+            }
+        }
+}
+}

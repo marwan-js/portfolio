@@ -1,3 +1,83 @@
-.marwan{
-    color: green;
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
+
+.header {
+  background-color: #EAEAEA;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px 10px 20px;
+  height: 10vh;
+}
+.header .header-container .logo {
+  color: #FF1E00;
+  font-size: 40px;
+  cursor: pointer;
+}
+.header .header-container .list {
+  display: flex;
+  float: right;
+  justify-content: space-around;
+  width: 50%;
+}
+.header .header-container .list .link {
+  color: rgba(80, 84, 93, 0.8745098039);
+  cursor: pointer;
+  font-size: 20px;
+}
+.header .header-container .list .link:hover {
+  color: rgba(0, 0, 0, 0.832);
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?w=2000") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+.main .main-continer {
+  margin: 0 0 0 10%;
+}
+.main .main-continer p {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #EAEAEA;
+}
+.main .main-continer h1 {
+  color: #FF1E00;
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+.main .main-continer button {
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ABB3;
+  color: white;
+  width: 150px;
+  height: 40px;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+.main .main-continer button:hover {
+  background-color: #008188;
+  transform: scale(1.07);
+}/*# sourceMappingURL=main.css.map */
