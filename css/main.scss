@@ -1,13 +1,14 @@
-$mainColor : #50545ddf;
+$mainColor : #e7e7e7;
 $segmaColor:#FF1E00;
-$lightColor : #EAEAEA;
+$backColor : #59CE8F;
 $buttomColor:#00ABB3;
+$buttomHoverColor:#008188;
 // variabels
 @mixin prefix($name,$value,$prefxes){
+    $name:$value;
     @each $prefix in $prefxes{
        #{ "-" + $prefix + '-' + $name}:$value;
     }
-    $name:$value;
 }
 @mixin anmietion($name){
     @-webkit-keyframes #{$name}{
@@ -44,10 +45,16 @@ $buttomColor:#00ABB3;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    @include prefix(box-sizing,border-box,webkit moz o )
+    @include prefix(box-sizing,border-box,webkit moz)
 }
+a{
+    text-decoration: none;
+}
+// body{
+//     height: 10000px;
+// }
 .header{
-    background-color: $lightColor;
+    background-color: $backColor;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -73,7 +80,7 @@ $buttomColor:#00ABB3;
                 cursor: pointer;
                 font-size: 20px;
                 &:hover{
-                    color: rgba(0, 0, 0, 0.832);
+                    color: $segmaColor;
                 }
             }
         }
@@ -84,7 +91,7 @@ $buttomColor:#00ABB3;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?w=2000") no-repeat;
+    background: url("https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&w=600") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -92,18 +99,18 @@ $buttomColor:#00ABB3;
     .main-continer{
         margin: 0  0 0 10% ;
         p{
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: $lightColor;
+            font-size: 35px;
+            margin-bottom: 5%;
+            color: $mainColor;
         }
         h1{
             color: $segmaColor;
-            font-size: 55px;
+            font-size: 60px;
             margin-bottom: 30px;
         }
         button{
             font-size: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 10%;
             border: none;
             border-radius: 8px;
             background-color: $buttomColor;
@@ -113,9 +120,75 @@ $buttomColor:#00ABB3;
             transition: all 400ms ease;
             cursor: pointer;
             &:hover{
-                background-color: #008188;
-                transform: scale(1.07);
+                background-color: $buttomHoverColor;
+                transform: scale(1.1);
             }
         }
+        .icons{
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+            i{
+                font-size: 25px;
+                margin-top: 5%;
+                color: $mainColor;
+                cursor: pointer;
+                &:hover{
+                    color: $backColor;
+                }
+            }
+        }
+    }
 }
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    .card{
+        box-shadow: 0px 0px 15px #343434a0;
+        transition: all 500ms ease;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }
+.title{
+    display: block;
+    margin:auto auto 5% auto;
+    color: $segmaColor;
+    width: 40%;
+    font-size: 40px;
+    text-align: center;
+}
+.services{
+    margin: 10% 0 10% 0;
+    .services-continer{
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            width: 65%;
+            background-color: $backColor;
+            margin: auto;
+            border-radius: 8px;
+            i{
+                font-size: 150px;
+                margin: 10% 0 10% 0;
+            }
+            h2{
+                color: $segmaColor;
+                font-size: 30px;
+                margin: 1% 0 0 0;
+            }
+            p{
+                color: $mainColor;
+                margin: 5% 0 5% 0;
+                color: $mainColor;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
