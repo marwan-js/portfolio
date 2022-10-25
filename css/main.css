@@ -103,29 +103,9 @@ a {
   background-color: #008188;
   transform: scale(1.1);
 }
-.main .main-continer .popup {
-  background-color: rgba(0, 0, 0, 0.4901960784);
-  text-align: center;
-  position: absolute;
-  transform: translateY(-100%);
-}
-.main .main-continer .email-popup {
-  display: none;
-  left: 6.6666666667%;
-  width: 100px;
-  height: 15px;
-  font-size: 12px;
-}
-.main .main-continer .whats-popup {
-  display: none;
-  left: 11.1111111111%;
-  width: 100px;
-  height: 15px;
-  font-size: 12px;
-}
 .main .main-continer .icons {
   display: flex;
-  width: 30%;
+  width: 40%;
   justify-content: space-between;
 }
 .main .main-continer .icons i {
@@ -216,9 +196,6 @@ a {
   padding-top: 0;
   padding-bottom: 10px;
   overflow: hidden;
-}
-.projects .projects-continer .card:hover {
-  transform: scale(1.1);
 }
 .projects .projects-continer .card img {
   width: 400px;

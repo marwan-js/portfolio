@@ -10,13 +10,5 @@ $(document).ready(function () {
         });
       }
     });
-  $(".icon1").hover(
-    () => { $('.email-popup').css('display', 'block') },
-    () => { $('.email-popup').css('display', 'none') }
-  )
-  $(".icon2").hover(
-    () => { $('.whats-popup').css('display', 'block') },
-    () => { $('.whats-popup').css('display', 'none') }
-  )
 });
   
