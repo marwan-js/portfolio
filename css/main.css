@@ -45,6 +45,50 @@ a {
   margin: 10px 20px 10px 20px;
   height: 10vh;
 }
+.header .header-container .popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e7e7e7;
+  width: 96%;
+  top: 13.5vh;
+  padding: 10px 0 10px 0;
+  left: 2%;
+  display: none;
+}
+.header .header-container .popup .poplink {
+  padding: 10px 0 10px 0;
+  color: black;
+}
+.header .header-container .popup .poplink:hover {
+  width: 100%;
+  color: #FF1E00;
+  background-color: #cecbcb;
+}
+.header .header-container .active {
+  display: flex;
+}
+.header .header-container .phonelist {
+  display: none;
+  margin: 0 5% 0 0;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .header .header-container .phonelist {
+    display: block;
+  }
+}
+.header .header-container .phonelist:hover .span {
+  background-color: #FF1E00;
+}
+.header .header-container .phonelist .span {
+  display: block;
+  background-color: black;
+  width: 25px;
+  height: 2px;
+  margin: 4px;
+}
 .header .header-container .logo {
   color: #FF1E00;
   font-size: 40px;
@@ -55,6 +99,11 @@ a {
   float: right;
   justify-content: space-around;
   width: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .header .header-container .list {
+    display: none;
+  }
 }
 .header .header-container .list .link {
   color: #e7e7e7;
@@ -76,6 +125,100 @@ a {
   background-position: center;
   background-attachment: fixed;
   color: white;
+}
+.main .mouse {
+  width: 150px;
+  height: 230px;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  background-color: blue;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+}
+@media only screen and (max-width: 600px) {
+  .main .mouse {
+    width: 35px;
+    height: 70px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+.main .mouse .span {
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-40%, 50%);
+  width: 5px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #FF1E00;
+  display: block;
+  -webkit-animation-name: ease;
+          animation-name: ease;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media only screen and (max-width: 600px) {
+  .main .mouse .span {
+    width: 3px;
+    height: 10px;
+  }
+}
+.main .mouse div {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #00ABB3;
+  width: 5%;
+  height: 53%;
+}
+@media only screen and (max-width: 600px) {
+  .main .mouse div {
+    width: 10%;
+  }
+}
+@-webkit-keyframes ease {
+  0% {
+    top: 5%;
+    opacity: 1;
+  }
+  25% {
+    top: 20%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 35%;
+    opacity: 0.3;
+  }
+  100% {
+    top: 40%;
+    opacity: 0;
+  }
+}
+@keyframes ease {
+  0% {
+    top: 5%;
+    opacity: 1;
+  }
+  25% {
+    top: 20%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 35%;
+    opacity: 0.3;
+  }
+  100% {
+    top: 40%;
+    opacity: 0;
+  }
 }
 .main .main-continer {
   margin: 0 0 0 10%;
@@ -124,7 +267,6 @@ a {
 .cards {
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: center;
 }
 @media only screen and (max-width: 600px) {
   .cards {
@@ -156,6 +298,14 @@ a {
     transform: none;
   }
 }
+@media only screen and (min-width: 600px) {
+  .cards .card {
+    margin: 10% auto 10% auto;
+  }
+  .cards .card:hover {
+    transform: none;
+  }
+}
 
 .title {
   display: block;
@@ -170,7 +320,7 @@ a {
   padding: 100px 0 100px 0;
 }
 .services .services-continer .card {
-  width: 65%;
+  width: 70%;
 }
 .services .services-continer .card i {
   font-size: 150px;
@@ -233,24 +383,25 @@ a {
 .contact {
   padding: 30px 0 30px 0;
 }
-.contact .contact-continer {
-  display: flex;
-}
 .contact .contact-continer .card {
-  width: 350px;
-  margin: 20px;
+  width: 70%;
 }
 .contact .contact-continer .card i {
   font-size: 100px;
-  margin: 10% 0 10% 0;
   color: #e7e7e7;
+  margin-top: 3%;
 }
 .contact .contact-continer .card h2 {
   color: rgba(0, 0, 0, 0.768);
-  font-size: 25px;
-  margin: 1% 0 0 0;
+  font-size: 20px;
+  margin: 2% 0 2% 0;
+  cursor: pointer;
 }
-.contact .contact-continer .card h2:hover {
+.contact .contact-continer .card h2 a {
+  color: rgba(0, 0, 0, 0.758);
+  cursor: pointer;
+}
+.contact .contact-continer .card h2 a:hover {
   color: #00ABB3;
 }
 .contact .contact-continer .card p {
