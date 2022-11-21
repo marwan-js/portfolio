@@ -140,9 +140,9 @@ a {
 }
 @media only screen and (max-width: 600px) {
   .main .mouse {
-    width: 35px;
-    height: 70px;
-    top: 80%;
+    width: 45px;
+    height: 80px;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, 50%);
   }
@@ -166,8 +166,9 @@ a {
 }
 @media only screen and (max-width: 600px) {
   .main .mouse .span {
-    width: 3px;
+    width: 2px;
     height: 10px;
+    transform: translate(-50%, 50%);
   }
 }
 .main .mouse div {
@@ -178,6 +179,7 @@ a {
   background-color: #00ABB3;
   width: 5%;
   height: 53%;
+  border-radius: 25%;
 }
 @media only screen and (max-width: 600px) {
   .main .mouse div {

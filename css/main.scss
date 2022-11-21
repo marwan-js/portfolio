@@ -178,9 +178,9 @@ a{
         border-bottom-right-radius: 40%;
         border-bottom-left-radius: 40%;    
         @include respond(phone){
-            width: 35px;
-            height: 70px;
-            top: 80%;
+            width: 45px;
+            height: 80px;
+            top: 75%;
             left: 50%;
             transform: translate(-50%,50%);
         }
@@ -198,8 +198,9 @@ a{
             animation-duration: 1.5s;
             animation-iteration-count:infinite;
             @include respond(phone){
-                width: 3px;
+                width: 2px;
                 height: 10px;
+                transform: translate(-50%,50%);
             }
         }
         div{
@@ -210,6 +211,7 @@ a{
             background-color: $buttomColor;
             width: 5%;
             height: 53%;
+            border-radius: 25%;
             @include respond(phone){
                 width: 10%;
             }
