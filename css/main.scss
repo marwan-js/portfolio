@@ -308,12 +308,6 @@ a{
                 transform: none;
             }
         };
-        @include respond(tablet){
-            margin: 10% auto 10% auto ;
-            &:hover{
-                transform: none;
-            }
-        };
     }
 }
 .title{
